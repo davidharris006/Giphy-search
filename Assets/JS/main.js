@@ -3,7 +3,7 @@ $(document).ready(function () {
 var sports = ["Football", "Basketball", "Baseball", "Soccer", "Golf", "Hockey", "MMA", "Volleyball", "Lacrosse"];
 
 function createbuttons() {
-    $('#gif-buttons').empty
+    $('#gif-buttons').empty()
 for (let i = 0; i < sports.length; i++) {
     var buttonsmade= $('<button>')
     buttonsmade.addClass('sports')
@@ -14,9 +14,9 @@ for (let i = 0; i < sports.length; i++) {
 }
 }
 $('#search-btn').on("click", function(event){   
-        event.preventDefualt();
+        event.preventDefault();
 
-        var searchval = $('#search-input').val().trim()
+        var searchval = $("#search-input").val().trim()
         sports.push(searchval);
         createbuttons()
 
@@ -35,6 +35,7 @@ $.ajax({
         var newdivs = $('<div>')
         var pic = response.data[i].images.downsized_medium.url
         newdivs.html(`<img src="${pic}">`).css("margin", "10px")
+        newdivs.prepend('Rating:' + response.data[i].rating + "<br>").css('text-align', 'center')
         $('#gif-display').append(newdivs)
     }
   });
