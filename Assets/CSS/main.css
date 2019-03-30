@@ -1,6 +1,42 @@
+body {
+    background: url(../Images/Sportsbkgrnd.jpg) no-repeat fixed;
+    background-position: center;
+    margin:0;
+}
+main {
+    margin:0;
+}
+.ratingbox {
+    background-color: darkgrey;
+    margin: 3px;
+}
+.gifbackground {
+    background-color: white;
+    margin: 3px;
+    
+}
+#headerbox {
+    padding: 10px;
+    top: 0;
+    display: block;
+    width: 100vw;
+    height: 100px;
+    background-color: rgba(71, 71, 71, 0.637);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.gifs {
+    margin: 5px;
+}
 #gif-display {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 75vw;
+    margin-left: 200px;
     
+}
+#search-form {
+    color: white;
+    margin: 5px;
 }
